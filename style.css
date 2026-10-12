@@ -1,0 +1,99 @@
+/* blue41 studio: navy + glowing cyan, Goldman headings (shared with blue41 Playbooks and PES2021 Mod Studio) */
+:root {
+  --bg: #0A192F;
+  --bg-2: #111224;
+  --card: rgba(17, 18, 36, 0.75);
+  --cyan: #00F0FF;
+  --blue: #019EE2;
+  --text: #E8EEF8;
+  --muted: #A9B6CC;
+  --border: rgba(0, 240, 255, 0.18);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: radial-gradient(900px 600px at 15% -10%, rgba(1, 158, 226, 0.18), transparent 60%),
+              radial-gradient(900px 600px at 100% 30%, rgba(0, 240, 255, 0.08), transparent 60%), var(--bg);
+  color: var(--text);
+  font: 16px/1.6 "Inter", system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+a { color: var(--cyan); text-decoration: none; }
+a:hover { text-decoration: underline; }
+h1, h2, h3 { font-family: "Goldman", sans-serif; font-weight: 700; line-height: 1.15; }
+
+.top {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 14px clamp(16px, 4vw, 48px);
+  background: rgba(10, 25, 47, 0.85); backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+.brand { display: flex; flex-direction: column; line-height: 1; }
+.brand:hover { text-decoration: none; }
+.brand-b41 { font: 700 26px "Goldman", sans-serif; color: var(--blue); }
+.brand-name { font: 400 13px "Goldman", sans-serif; letter-spacing: 6px; color: var(--text); padding-left: 2px; }
+nav { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; justify-content: flex-end; }
+nav > a:not(.pill) { color: var(--text); }
+
+.pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 14px; border-radius: 999px; font: 600 14px "Inter", sans-serif; white-space: nowrap;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.pill:hover { text-decoration: none; transform: translateY(-1px); }
+.pill svg { width: 15px; height: 15px; fill: currentColor; }
+.pill.patreon { background: #FF424D; color: #FFFFFF; }
+.pill.patreon:hover { box-shadow: 0 6px 20px rgba(255, 66, 77, 0.35); }
+.pill.coffee { background: #FFDD00; color: #000000; }
+.pill.coffee:hover { box-shadow: 0 6px 20px rgba(255, 221, 0, 0.3); }
+.pill.big { padding: 12px 22px; font-size: 16px; }
+.pill.big svg { width: 18px; height: 18px; }
+
+main { max-width: 1040px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px); }
+section { padding: 56px 0; }
+h2 { font-size: clamp(26px, 3vw, 32px); margin: 0 0 24px; }
+
+.hero { text-align: center; padding-top: 72px; }
+.hero h1 { margin: 0; display: flex; flex-direction: column; align-items: center; }
+.hero .glow { font-size: clamp(64px, 12vw, 120px); color: var(--cyan); text-shadow: 0 0 32px rgba(0, 240, 255, 0.45); }
+.hero .sub { font: 400 clamp(20px, 3.5vw, 34px) "Goldman", sans-serif; letter-spacing: 0.6em; padding-left: 0.6em; color: var(--text); }
+.lead { max-width: 60ch; margin: 28px auto 0; color: var(--muted); font-size: 18px; }
+
+.apps { display: grid; gap: 18px; }
+.app {
+  display: flex; gap: 22px; align-items: flex-start;
+  background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px;
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.35);
+}
+.app-icon { width: 88px; height: 88px; border-radius: 20px; flex: none; box-shadow: 0 0 24px rgba(0, 240, 255, 0.15); }
+.app-head { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.app-head h3 { margin: 0; font-size: 22px; }
+.tag { font: 600 12px "Inter", sans-serif; padding: 2px 10px; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); }
+.tag.soon { color: var(--cyan); background: rgba(0, 240, 255, 0.08); }
+.app-tagline { margin: 6px 0 8px; color: var(--cyan); font-weight: 600; }
+.app p { margin: 0 0 6px; color: var(--muted); }
+
+.links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.links.center { justify-content: center; }
+.button {
+  display: inline-block; padding: 10px 18px; border-radius: 10px; font-weight: 600;
+  border: 1px solid var(--border); color: var(--text); background: var(--bg-2);
+}
+.button:hover { text-decoration: none; box-shadow: 0 6px 22px rgba(0, 240, 255, 0.18); }
+.button.primary { background: var(--blue); border-color: var(--blue); color: #000000; }
+
+.support { text-align: center; }
+.support p { color: var(--muted); }
+
+footer { border-top: 1px solid var(--border); padding: 26px; text-align: center; color: var(--muted); font-size: 14px; }
+
+@media (max-width: 640px) {
+  .app { flex-direction: column; }
+  nav > a:not(.pill) { display: none; }
+  .pill { padding: 6px 11px; font-size: 13px; }
+}
