@@ -109,3 +109,7 @@ footer { border-top: 1px solid var(--border); padding: 26px; text-align: center;
 footer .langs { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 14px; font-size: 13px; }
 footer .langs a { color: var(--muted); }
 footer .langs a[aria-current] { color: var(--cyan); }
+
+/* footer: made in Brazil */
+.made-in { display: inline-flex; align-items: center; gap: 7px; margin: 6px 0; opacity: 0.85; }
+.made-in .flag { width: 20px; height: 14px; }
