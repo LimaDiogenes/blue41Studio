@@ -113,3 +113,6 @@ footer .langs a[aria-current] { color: var(--cyan); }
 /* footer: made in Brazil */
 .made-in { display: inline-flex; align-items: center; gap: 7px; margin: 6px 0; opacity: 0.85; }
 .made-in .flag { width: 20px; height: 14px; }
+
+/* footer: visitor globe (RevolverMaps) */
+.globe { display: flex; justify-content: center; margin: 14px 0 4px; min-height: 200px; }
